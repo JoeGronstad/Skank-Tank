@@ -1,0 +1,38 @@
+body{
+    background-color: #333;
+}
+
+#main{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -400px; /*set to a negative number 1/2 of your height*/
+    margin-left: -500px; /*set to a negative number 1/2 of your width*/
+
+    width: 1000px;
+    height:100vw;
+
+    background-color: whitesmoke;
+}
+
+div.player{
+    position: absolute;
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: 1;
+}
+
+div.bullet{
+    position: absolute;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+div.tracks{
+    position: absolute;
+    background-color: black;
+    height: 10px;
+    width: 10px;
+}
