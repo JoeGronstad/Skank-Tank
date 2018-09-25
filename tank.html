@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skank Tank</title>
+    <script src="tank.js"></script>
+    <link rel="stylesheet" href="tank.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="canvas">
+            <button id="start">START</button>
+            <div id="wall">
+                <div class="walls" id="w1"></div>
+                <div class="walls" id="w2"></div>
+                <div class="walls" id="w3"></div>
+                <div class="walls" id="w4"></div>
+                <div class="walls" id="w5"></div>
+                <div class="walls" id="w6"></div>
+            </div>
+            <div id="countdown">
+                <div id="countdown-number"></div>
+            </div>
+            <div id="players">
+                <div id="player1" class="player">
+                    <h4>Player 1</h4>
+                </div>
+                <button id="up" onclick="up()">UP</button>
+                <button id="down" onclick="down()">DOWN</button>
+                <div id="player2" class="player">
+                    <h4>Player 2</h4>
+                </div>
+            </div>
+            <div id="win"><h1 id="winText"></h1></div>
+            <div id="barContainer">
+                <div class="progressbar" id="redBar">
+                    <div class="progress" id="redProgress"></div>
+                </div>
+                <div class="progressbar" id="blueBar">
+                    <div class="progress" id="blueProgress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        setup();
+
+        let redProgress = document.getElementById("redProgress");
+        let win = document.getElementById("win")
+        let wT = document.getElementById("winText");
+        let w = 200;
+        
+
+
+        function down() {
+            w -= 40;
+            redProgress.style.width = w + "px";
+            
+            if(w === 0){
+                wT.innerHTML = "Blue Wins";
+                win.style.width = 160 + "px";
+                console.log("win");
+                return;
+            }
+
+            console.log(w);
+        }
+
+        function up(){
+            if(w==200){
+                console.log("full health");
+                return
+            }
+            w += 40;
+            redProgress.style.width = w + "px";
+
+        }
+    </script>
+</body>
+
+</html>
