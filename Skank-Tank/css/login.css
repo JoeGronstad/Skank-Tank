@@ -23,16 +23,8 @@ button {
 }
 
 #loginknap {
-    background-color: #2f4f4f;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 100%;
-    top: 70%;
-    position: relative;
-    animation: fadein 5s ;
+    left: -2.5%;
+    animation: fadein 3.8s ;
 }
 
 @keyframes fadein {
@@ -140,9 +132,4 @@ span.psw {
     to {
         transform: scale(1)
     }
-}
-
-@keyframes komfrem {
-    0% {}
-    100% {}
 }
